@@ -3,6 +3,7 @@
 }
 <!DOCTYPE html>
 <html lang="en">
+
 <style>
     .title-container {
         display: flex;
@@ -13,15 +14,23 @@
         margin-right: 10px;
     }
 </style>
+
 <body>
 <div class="text-center">
     <div class="title-container">
+
+        <!-- custom thrifting logo -->
         <img src="~/ThriftingLogo.png" alt="Thrifting Logo" class="navbar-logo" width="100" height="100">
         <h1 class="display-4">Calculator</h1>
     </div>
+    <br/>
+
     <h4>Want to learn how to thrift from the best?</h4>
     <br/>
+
     <p>Use the calculator below to see how much a session would cost.</p>
+
+    <!-- gets the amount of hours and outputs the cost to get tutored -->
     <form id="calculatorForm">
         <div class="form-group">
             <label for="Hours">Hours</label>
@@ -30,24 +39,32 @@
         <br/>
         <div class="form-group">
             <label for="Rate">Hourly Rate</label>
+
+            <!-- non-editable box of charge per hour -->
             <input type="text" id="Rate" value="$10" readonly/>
         </div>
         <br/>
+
         <div class="form-group">
             <input type="submit" value="Calculate" id="btnSubmit"/>
         </div>
         <br/>
+
         <div class="form-group">
             <label for="Total">Total Cost</label>
             <input type="text" id="Total" readonly/>
         </div>
     </form>
     <br/>
+
+    <!-- link back to the home page -->
     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Back to home</a>
 </div>
 
+<!-- allows us to use jquery and bootstrap -->
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+
 </body>
 </html>
